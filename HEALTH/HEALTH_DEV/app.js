@@ -21,7 +21,7 @@ var width = svgWidth - margin.left - margin.right;
 var height = svgHeight - margin.top - margin.bottom;
 
 // Create an SVG wrapper, append an SVG group that will hold our chart, and shift the latter by left and top margins.
-var svg = d3.select("#scatter")
+var svg = d3.select(".chart")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
@@ -32,7 +32,7 @@ var chartGroup = svg.append("g")
 // Import Data
 //d3.csv("./Assets/Data/healthdata.csv", function(error, HData) {
 //  if (error) return console.warn(error);
-d3.csv("./Assets/Data/healthdata.csv",function(error,healthData)
+d3.csv("healthData.csv",function(error,healthData)
 {
   if (error) return console.warn(error);
   console.log(healthData);
